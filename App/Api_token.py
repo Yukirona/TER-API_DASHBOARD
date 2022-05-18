@@ -16,7 +16,7 @@ def get_api_token():
 
         response = requests.post(url, headers=headers, data=data)
 
-        print(response.status_code)
+        #print(response.status_code)
 
         content = response.content.decode("utf-8")
         content_splitted = content.split(",")
@@ -28,7 +28,7 @@ def get_api_token():
 
         token = re.sub(':|"|}|{|access_token', "", selected_content)
 
-        print(token)
+        #print(token)
 
         return token
 
