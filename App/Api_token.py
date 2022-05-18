@@ -18,8 +18,12 @@ def get_api_token():
 
         #print(response.status_code)
 
+        
+
         content = response.content.decode("utf-8")
+        #print(content)
         content_splitted = content.split(",")
+        #print(content_splitted)
         list_access_token = [('access_token' in string)
                                 for string in content_splitted]
         selected_content = [x for x, y in zip(

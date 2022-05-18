@@ -17,8 +17,8 @@ def get_local_data(jeu_donnees ,croisement ,modalités ,nivgeo ,codgeo):
 
 
     response = requests.get(url, headers=headers)
-
-    content = response.content.decode("utf-8")
-    jcontent = json.loads(content)
+    ocontent = response.content 
+    dcontent = response.content.decode("utf-8")
+    jcontent = json.loads(dcontent)
     
     return (jcontent)
