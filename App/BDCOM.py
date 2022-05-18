@@ -1,15 +1,14 @@
 
-from urllib import response
-import requests
-from requests.structures import CaseInsensitiveDict
 import json
-import Api_token
-from Api_token import get_api_token
 from local_data import get_local_data
 
+jeu_donnees = "BDCOM2018"
+croisement = "INDICS_BDCOM"
+modalités = "1"
+nivgeo = "COM"
+codgeo = "52448"
 
-
-wanted_data = get_local_data()
+wanted_data = get_local_data(jeu_donnees ,croisement ,modalités ,nivgeo ,codgeo)
 
 print(wanted_data)
 

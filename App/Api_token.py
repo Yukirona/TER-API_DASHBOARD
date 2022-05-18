@@ -1,9 +1,9 @@
 
-from urllib import response
 import requests
-import json
 import re
 from requests.structures import CaseInsensitiveDict
+
+#function to get or generate the token to access the API
 def get_api_token():
         url = "https://api.insee.fr/token"
 
@@ -32,4 +32,3 @@ def get_api_token():
 
         return token
 
-get_api_token()
