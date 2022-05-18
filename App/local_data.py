@@ -7,7 +7,8 @@ import Api_token
 from Api_token import get_api_token
 
 
-url = "https://api.insee.fr/donnees-locales/V0.1/donnees/geo-SEXE-AGE15_15_90@GEO2020RP2017/COM-44109.all.all"
+url = "https://api.insee.fr/donnees-locales/V0.1/donnees/geo-SEXE-AGE15_15_90@GEO2020RP2017/COM-52448.all.all"
+
 
 headers = CaseInsensitiveDict()
 headers["Accept"] = "application/json"
