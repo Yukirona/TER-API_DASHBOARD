@@ -14,11 +14,12 @@ def get_api_token():
 
         data = "grant_type=client_credentials"
 
+
         response = requests.post(url, headers=headers, data=data)
         dcontent = response.content.decode("utf-8")
         jcontent = json.loads(dcontent)
         token = (jcontent['access_token'])
-        #print(token)
-
+        print(token)
         return(token)
-        
+
+get_api_token()
