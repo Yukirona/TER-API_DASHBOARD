@@ -19,6 +19,6 @@ def get_api_token():
         jcontent = json.loads(dcontent)
         token = (jcontent['access_token'])
         #print(token)
-
+        #print(response.status_code)
         return(token)
-#/////////////////////////////////////////////////////////////////////////////#       
+#/////////////////////////////////////////////////////////////////////////////#  
