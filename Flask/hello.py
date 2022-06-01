@@ -7,6 +7,11 @@ app = Flask(__name__)
 df = init_dash()
 
 
-@app.route('/')
+@app.route('/Dashboard')
 def index():
-        return render_template('index.html',  tables=[df.to_html(classes='data')])
+        return render_template('index.html')
+
+@app.route('/Population')
+def Population():
+        return render_template('Pop.html',  tables=[df.to_html(classes='data')])
+
