@@ -1,0 +1,65 @@
+{
+    "Croisement": {
+        "Filtre": "",
+        "Groupe": {
+            "@code": "FHM",
+            "$": "France hors Mayotte"
+        },
+        "JeuDonnees": {
+            "@code": "GEO2020RFD2019",
+            "Annee": "2019",
+            "Libelle": "R\u00e9pertoire et fichiers d\u00e9mographiques 2019",
+            "Source": "R\u00e9pertoire et fichiers d\u00e9mographiques"
+        }
+    },
+    "Zone": {
+        "@codgeo": "52448",
+        "@nivgeo": "COM",
+        "Millesime": {
+            "@annee": "2020",
+            "Nccenr": "Saint-Dizier",
+            "Tncc": "0"
+        }
+    },
+    "Variable": {
+        "@code": "INDICS_ETATCIVIL",
+        "Libelle": "Indicateurs issus de \u00e9tat civil",
+        "Modalite": {
+            "@code": "1",
+            "@variable": "",
+            "Libelle": "La modalit\u00e9 unique"
+        }
+    },
+    "Cellule": [
+        {
+            "Zone": {
+                "@codgeo": "52448",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "NBNAIS",
+                "$": "Nombre de naissances"
+            },
+            "Modalite": {
+                "@code": "1",
+                "@variable": "INDICS_ETATCIVIL"
+            },
+            "Valeur": "230"
+        },
+        {
+            "Zone": {
+                "@codgeo": "52448",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "NBDEC",
+                "$": "Nombre de d\u00e9c\u00e8s"
+            },
+            "Modalite": {
+                "@code": "1",
+                "@variable": "INDICS_ETATCIVIL"
+            },
+            "Valeur": "292"
+        }
+    ]
+}

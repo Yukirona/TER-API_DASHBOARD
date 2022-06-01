@@ -1,5 +1,7 @@
 from local_data import get_local_data
 import pandas as pd
+import json
+from pathlib import Path
 
 # - Function to retrieve the dataset contained in the BDCOM database
 
@@ -14,10 +16,13 @@ def INDICS_ETATCIVIL_2020():
 
         wanted_data_RFD = get_local_data(jeu_donnees ,croisement ,modalités ,nivgeo ,codgeo)
 
-        #with open("wanted_data_RFD.json", "w") as outfile:
-                #json.dump(wanted_data_RFD, outfile)
+        #base = Path('data_json')
+        #jsonpath = base /  "wanted_data_RFD.json"
+        #base.mkdir(exist_ok=True)
+        #jsonpath.write_text(json.dumps(wanted_data_RFD))
 
         #print(type(wanted_data_RFD))
 
         return (wanted_data_RFD)
 #/////////////////////////////////////////////////////////////////////////////#
+INDICS_ETATCIVIL_2020()
