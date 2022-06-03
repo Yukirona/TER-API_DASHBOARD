@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from api import init_dash
-
+import random
 
 app = Flask(__name__)
 
