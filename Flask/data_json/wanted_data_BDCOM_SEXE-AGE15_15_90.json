@@ -6,9 +6,9 @@
             "$": "France hors Mayotte"
         },
         "JeuDonnees": {
-            "@code": "GEO2020RP2017",
-            "Annee": "2017",
-            "Libelle": "Recensement de la population 2017",
+            "@code": "GEO2021RP2018",
+            "Annee": "2018",
+            "Libelle": "Recensement de la population 2018",
             "Source": "Recensement de la population"
         }
     },
@@ -16,7 +16,7 @@
         "@codgeo": "52448",
         "@nivgeo": "COM",
         "Millesime": {
-            "@annee": "2020",
+            "@annee": "2021",
             "Nccenr": "Saint-Dizier",
             "Tncc": "0"
         }
@@ -110,7 +110,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "24012"
+            "Valeur": "23382"
         },
         {
             "Zone": {
@@ -131,7 +131,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "11467.948693"
+            "Valeur": "11097.857008"
         },
         {
             "Zone": {
@@ -152,7 +152,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "12544.051307"
+            "Valeur": "12284.142992"
         },
         {
             "Zone": {
@@ -173,7 +173,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "3853.962135"
+            "Valeur": "3582.304955"
         },
         {
             "Zone": {
@@ -194,7 +194,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "1959.568016"
+            "Valeur": "1818.819465"
         },
         {
             "Zone": {
@@ -215,7 +215,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "1894.39412"
+            "Valeur": "1763.48549"
         },
         {
             "Zone": {
@@ -236,7 +236,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "4319.942798"
+            "Valeur": "4261.467476"
         },
         {
             "Zone": {
@@ -257,7 +257,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "2350.160533"
+            "Valeur": "2304.478921"
         },
         {
             "Zone": {
@@ -278,7 +278,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "1969.782265"
+            "Valeur": "1956.988556"
         },
         {
             "Zone": {
@@ -299,7 +299,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "3839.08675"
+            "Valeur": "3746.60734"
         },
         {
             "Zone": {
@@ -320,7 +320,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "1987.244947"
+            "Valeur": "1943.224218"
         },
         {
             "Zone": {
@@ -341,7 +341,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "1851.841803"
+            "Valeur": "1803.383122"
         },
         {
             "Zone": {
@@ -362,7 +362,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "5125.383892"
+            "Valeur": "4973.544008"
         },
         {
             "Zone": {
@@ -383,7 +383,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "2497.123239"
+            "Valeur": "2411.027365"
         },
         {
             "Zone": {
@@ -404,7 +404,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "2628.260653"
+            "Valeur": "2562.516644"
         },
         {
             "Zone": {
@@ -425,7 +425,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "4123.921594"
+            "Valeur": "4189.183621"
         },
         {
             "Zone": {
@@ -446,7 +446,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "1809.798244"
+            "Valeur": "1834.937619"
         },
         {
             "Zone": {
@@ -467,7 +467,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "2314.12335"
+            "Valeur": "2354.246001"
         },
         {
             "Zone": {
@@ -488,7 +488,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "2392.120446"
+            "Valeur": "2264.071778"
         },
         {
             "Zone": {
@@ -509,7 +509,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "816.530829"
+            "Valeur": "735.60669"
         },
         {
             "Zone": {
@@ -530,7 +530,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "1575.589617"
+            "Valeur": "1528.465088"
         },
         {
             "Zone": {
@@ -551,7 +551,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "357.582385"
+            "Valeur": "364.820822"
         },
         {
             "Zone": {
@@ -572,7 +572,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "47.522886"
+            "Valeur": "49.762731"
         },
         {
             "Zone": {
@@ -593,7 +593,7 @@
                     "@variable": "AGE15_15_90"
                 }
             ],
-            "Valeur": "310.059499"
+            "Valeur": "315.058091"
         }
     ]
 }

@@ -1,2 +1,9 @@
 
 
+
+{% for table in tables %}
+<div  class="table-responsive">
+    {{ table|safe }}
+</div>
+{% endfor %}
+

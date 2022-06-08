@@ -29,21 +29,25 @@ def INDICS_BDCOM():
 
 #/////////////////////////////////////////////////////////////////////////////#
 def POP_T1(wanted_data_BDCOM):
-        # - extracting the data from the json
-        pop1968 = (wanted_data_BDCOM['Cellule'][1]['Valeur'])
-        pop1975 = (wanted_data_BDCOM['Cellule'][2]['Valeur'])
-        pop1982 = (wanted_data_BDCOM['Cellule'][3]['Valeur'])
-        pop1990 = (wanted_data_BDCOM['Cellule'][4]['Valeur'])
-        pop1999 = (wanted_data_BDCOM['Cellule'][5]['Valeur'])
-        pop2008 = (wanted_data_BDCOM['Cellule'][6]['Valeur'])
-        pop2013 = (wanted_data_BDCOM['Cellule'][7]['Valeur'])
-        pop2018 = (wanted_data_BDCOM['Cellule'][8]['Valeur'])
-        # creating the POP_T1 tab
-        table = [[ pop1968, pop1975, pop1982, pop1990, pop1999, pop2008, pop2013, pop2018]]
-        df = pd.DataFrame(table, columns = ['1968', '1975', '1982', '1990', '1999', '2008', '2013', '2018'], index=['population'])
+        # - extracting and converting the data from the json
+        superficie =  float(wanted_data_BDCOM['Cellule'][0]['Valeur'])/100
+        pop = {}
+        flpop  = {}
+        sup = {}
+        for i in range(1,9):
+                pop[i] = (wanted_data_BDCOM['Cellule'][i]['Valeur'])
+                flpop[i] = float(wanted_data_BDCOM['Cellule'][i]['Valeur'])
+                sup[i] = flpop[i]/superficie
+            
+        # - creating the POP_T1 tab
+        table = [[ pop[1], pop[2], pop[3], pop[4], pop[5], pop[6], pop[7], pop[8]],
+                 [sup[1], sup[2], sup[3], sup[4], sup[5], sup[6], sup[7], sup[8]]]
+        df = pd.DataFrame(table, columns = ['1968', '1975', '1982', '1990', '1999', '2008', '2013', '2018'], index=['population',
+                                                                                                                    'densité ( hab/km²) '])
      
 
 
         return (df)
+        
     
 #/////////////////////////////////////////////////////////////////////////////#
