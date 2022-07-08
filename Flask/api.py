@@ -1,5 +1,5 @@
 from BDCOM import INDICS_BDCOM, POP_T1
-from RP import AGE15_15_90, POP_T0
+#from RP import AGE15_15_90, POP_T0
 def init_POPT1():
     
     data = INDICS_BDCOM()

@@ -12,9 +12,9 @@ df2 = init_POPT1()
 def index():
         return render_template('index.html',)
 
-@app.route('/first')
+@app.route('/home')
 def first():
-        return render_template('first.html')
+        return render_template('home.html')
 
 @app.route('/Population')
 def population():

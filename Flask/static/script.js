@@ -9,6 +9,10 @@ $(document).ready(function () {
    
    });
 
+   $('#HOME').on('click', function(){
+      $('#data').load('/home');
+   });
+
    $('#POPT0').on('click', function(){
       $('#data').load('/Population #POPT0');
    
