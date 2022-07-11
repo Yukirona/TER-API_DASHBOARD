@@ -140,6 +140,12 @@ a.article:hover {
     transition: all 0.3s;
 }
 
+#chart {
+    height: 400px;
+  }
+  
+
+
 #home {
     text-align: center;
     width: 100%;
@@ -194,4 +200,9 @@ th {
         margin-left: 0;
     }
    
+}
+
+
+#chart{
+    height: 40px;
 }

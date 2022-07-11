@@ -4,7 +4,7 @@ import random
 
 app = Flask(__name__)
 
-df = init_POPT1()
+df = init_POPT0()
 df2 = init_POPT1()
 
 
@@ -12,11 +12,15 @@ df2 = init_POPT1()
 def index():
         return render_template('index.html',)
 
+@app.route('/chart')
+def chart():
+        return render_template('chart.html',)
+
 @app.route('/home')
 def first():
         return render_template('home.html')
 
 @app.route('/Population')
 def population():
-        return render_template('population.html',  tables=[[df.to_html(table_id= 'POPT1')],[df2.to_html(table_id= 'POPT0')]])
+        return render_template('population.html',  tables=[[df],[df2]])
 

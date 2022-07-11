@@ -44,10 +44,34 @@ def POP_T1(wanted_data_BDCOM):
                  [sup[1], sup[2], sup[3], sup[4], sup[5], sup[6], sup[7], sup[8]]]
         df = pd.DataFrame(table, columns = ['1968', '1975', '1982', '1990', '1999', '2008', '2013', '2018'], index=['population',
                                                                                                                     'densité ( hab/km²) '])
-     
-
+       
+        df= [df.to_html(table_id= 'POPT1')]
+        
 
         return (df)
         
     
 #/////////////////////////////////////////////////////////////////////////////#
+
+def FAM_G1(wanted_data_BDCOM):
+        # - extracting and converting the data from the json
+        
+        flnb  = {}
+        flpop  = {}
+        ratio = {}
+        for i in range(1,9):  
+                flnb[i] = float(wanted_data_BDCOM['Cellule'][i+8]['Valeur'])
+                flpop[i] = float(wanted_data_BDCOM['Cellule'][i+40]['Valeur'])
+                ratio[i] = flpop[i]/flnb[i]
+
+        print(ratio)       
+      
+        # - creating the POP_T1 tab
+        table = [[ ratio[1], ratio[2], ratio[3], ratio[4], ratio[5], ratio[6], ratio[7], ratio[8]]]
+        df = pd.DataFrame(table, columns = ['1968', '1975', '1982', '1990', '1999', '2008', '2013', '2018'], index=['population'])
+        
+        
+        
+        df = [df.to_html(table_id= 'POPT0')]
+       
+        return(df)
