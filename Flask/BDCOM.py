@@ -68,7 +68,7 @@ def FAM_G1(wanted_data_BDCOM):
       
         # - creating the POP_T1 tab
         table = [[ ratio[1], ratio[2], ratio[3], ratio[4], ratio[5], ratio[6], ratio[7], ratio[8]]]
-        df = pd.DataFrame(table, columns = ['1968', '1975', '1982', '1990', '1999', '2008', '2013', '2018'], index=['population'])
+        df = pd.DataFrame(table, columns = ['1968', '1975', '1982', '1990', '1999', '2008', '2013', '2018'], index=["Nombre moyen de résidents par habitation principale"])
         
         
         

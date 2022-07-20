@@ -156,6 +156,7 @@ td {
 }
 th {
   padding: 5px;
+  text-align: center;
 }
 .dataframe data {
   max-width: 200px;
