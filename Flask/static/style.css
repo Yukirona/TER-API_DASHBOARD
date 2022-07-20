@@ -138,12 +138,10 @@ a.article:hover {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
+    text-align: center;
 }
 
-#chart {
-    height: 400px;
-  }
-  
+
 
 
 #home {
@@ -161,6 +159,8 @@ th {
 }
 .dataframe data {
   max-width: 200px;
+ 
+ 
 }
 
 .table-responsive {
@@ -205,4 +205,21 @@ th {
 
 #chart{
     height: 40px;
+}
+
+#chartcontainer{
+ 
+    width: 75%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.dataframe{
+    
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+h1{
+    font-size: 30px;
 }

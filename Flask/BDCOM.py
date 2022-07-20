@@ -64,7 +64,7 @@ def FAM_G1(wanted_data_BDCOM):
                 flpop[i] = float(wanted_data_BDCOM['Cellule'][i+40]['Valeur'])
                 ratio[i] = flpop[i]/flnb[i]
 
-        print(ratio)       
+               
       
         # - creating the POP_T1 tab
         table = [[ ratio[1], ratio[2], ratio[3], ratio[4], ratio[5], ratio[6], ratio[7], ratio[8]]]
@@ -72,6 +72,6 @@ def FAM_G1(wanted_data_BDCOM):
         
         
         
-        df = [df.to_html(table_id= 'POPT0')]
+        df = [df.to_html(table_id= 'FAMG1')]
        
         return(df)

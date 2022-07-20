@@ -33,36 +33,11 @@
                 <li>
                     <a href="#PopSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Population</a>
                     <ul class="collapse list-unstyled" id="PopSubmenu">
+                       
                         <li>
-                            <a id="POPT0" href="javascript:void(0)">POP T0</a>
+                            <a id="POP_T1" href="javascript:void(0)">POP T1</a>
                         </li>
-                        <li>
-                            <a id="POPT1" href="javascript:void(0)">POP T1</a>
-                        </li>
-                        <li>
-                            <a id="POPT2" href="javascript:void(0)">POP T2</a>
-                        </li>
-                        <li>
-                            <a id="POPT2M" href="javascript:void(0)">POP T2M</a>
-                        </li>
-                        <li>
-                            <a id="POPT3" href="javascript:void(0)">POP T3</a>
-                        </li>
-                        <li>
-                            <a id="POPT4" href="javascript:void(0)">POP T4</a>
-                        </li>
-                        <li>
-                            <a id="POPT5" href="javascript:void(0)">POP T5</a>
-                        </li>
-                        <li>
-                            <a id="POPT6" href="javascript:void(0)">POP T6</a>
-                        </li>
-                        <li>
-                            <a id="POPG2" href="javascript:void(0)">POP G2</a>
-                        </li>
-                        <li>
-                            <a id="POPG3" href="javascript:void(0)">POP G3</a>
-                        </li>
+                    
                     </ul>
                 </li>
         
@@ -70,14 +45,12 @@
                 <li>
                     <a href="#MenSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ménages</a>
                     <ul class="collapse list-unstyled" id="MenSubmenu">
+                    
                         <li>
-                            <a href="#">Page 1</a>
+                            <a id="FAM_G1" href="javascript:void(0)">FAM G1</a>
                         </li>
                         <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
+                            <a id="FAM_G5" href="javascript:void(0)">FAM G5</a>
                         </li>
                     </ul>
                 </li>
@@ -131,13 +104,14 @@
            
 
             <div id="data">
-              
+                
+            </div>
+            <div id="chartcontainer">
+
             </div>
             {% block content %}
             {% endblock %}
-            <div id="chartcontain">
-
-            </div>
+            
         </div>
     </div>
 
@@ -155,6 +129,8 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
 
 
 
