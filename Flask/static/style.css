@@ -224,3 +224,12 @@ th {
 h1{
     font-size: 30px;
 }
+
+h2{
+    margin-bottom: 30px;
+}
+
+#para1, #para2{
+    text-align: justify;
+
+}

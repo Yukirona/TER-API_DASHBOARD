@@ -1,7 +1,12 @@
 var chart_type = 'value1';
 window.onload = function() {
 
-document.getElementById("chart").style.visibility = "hidden";}
+document.getElementById("chart").style.visibility = "hidden";
+
+$('#data').load('/home');
+$('#data').empty();
+$('#tab_title').empty();
+}
 
 
 $('#sidebarCollapse').on('click', function () {
@@ -18,13 +23,16 @@ $('#clear').on('click', function(){
 
 $('#HOME').on('click', function(){
    $('#data').load('/home');
+   $('#chartcontainer').empty();
+   document.getElementById("chart").style.visibility = "hidden";
+
    
 });
 
 
 
 $('#POP_T1').on('click', function(){
-   $('#data').load('/Population #POPT1');
+   $('#data').load('/Population #POPT1,#POPT1_title');
    document.getElementById("chart").style.visibility = "hidden";
    $('#chartcontainer').empty()
    
@@ -32,7 +40,7 @@ $('#POP_T1').on('click', function(){
 });
 
 $('#FAM_G1').on('click', function(){
-    $('#data').load('/Population #FAMG1');
+    $('#data').load('/Population #FAMG1,#FAMG1_title');
     document.getElementById("chart").style.visibility = "visible";
     $('#chartcontainer').empty()
     chart_type = 'line';
@@ -49,6 +57,17 @@ $('#FAM_G1').on('click', function(){
     
          
          
+});
+
+$('#LOG_G2').on('click', function(){
+    
+  $('#data').load('/Population #LOGG2,#LOGG2_title');
+  document.getElementById("chart").style.visibility = "visible";
+  $('#chartcontainer').empty()
+  chart_type = 'pie';
+  
+       
+       
 });
 
 
@@ -77,7 +96,7 @@ function callbackFirst() {
     callbackbar()
    }
    else if (chart_type == 'pie') {
-    callbacpie()
+    callbackpie()
    }
    
    
@@ -155,7 +174,7 @@ function callbackpie() {
   Highcharts.chart('chartcontainer', {
      data: {
        table: 'datatable',
-       switchRowsAndColumns: true
+       switchRowsAndColumns: false
 
      },
      chart: {
@@ -173,12 +192,20 @@ function callbackpie() {
         text: 'habitants'
       }
     },
+    
     tooltip: {
-      formatter: function () {
-        return '<b>' + this.series.name + '</b><br/>' +
-          this.point.y + ' ' + this.point.name.toLowerCase();
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+              enabled: true,
+              format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+          }
       }
-    }
+  },
    });
   console.log("Second Function end");
 }
