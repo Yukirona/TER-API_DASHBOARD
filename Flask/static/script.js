@@ -1,3 +1,4 @@
+var chart_type = 'value1';
 window.onload = function() {
 
 document.getElementById("chart").style.visibility = "hidden";}
@@ -17,6 +18,7 @@ $('#clear').on('click', function(){
 
 $('#HOME').on('click', function(){
    $('#data').load('/home');
+   
 });
 
 
@@ -24,35 +26,40 @@ $('#HOME').on('click', function(){
 $('#POP_T1').on('click', function(){
    $('#data').load('/Population #POPT1');
    document.getElementById("chart").style.visibility = "hidden";
-
+   $('#chartcontainer').empty()
+   
    
 });
 
 $('#FAM_G1').on('click', function(){
     $('#data').load('/Population #FAMG1');
     document.getElementById("chart").style.visibility = "visible";
-
+    $('#chartcontainer').empty()
+    chart_type = 'line';
+    
     
  });
 
  $('#FAM_G5').on('click', function(){
     
-         $('#data').load('/Population #FAMG5,#FAMG5_title');
-         document.getElementById("chart").style.visibility = "visible";
-         var type_chart = 'line'
-         return(type_chart)
+    $('#data').load('/Population #FAMG5,#FAMG5_title');
+    document.getElementById("chart").style.visibility = "visible";
+    $('#chartcontainer').empty()
+    chart_type = 'bar';
+    
+         
          
 });
 
 
  $('#chart').on ('click', function() {
    console.log("Button clicked!");
-   
+   console.log(chart_type);
    // Task is to execute callbackFirst
    // function first and then execute
    // callbackSecond function.
    callbackFirst();
-   a
+   
 });
 
 
@@ -60,14 +67,23 @@ $('#FAM_G1').on('click', function(){
 function callbackFirst() {
    console.log("First Function start");
    var elm = document.querySelector('table[class="dataframe"]');
-   console.log(elm.id);
    document.getElementById(elm.id).setAttribute("id", "datatable");
    console.log("First Function end");
+   console.log(chart_type);
+   if (chart_type == 'line') {
+    callbackline()
+   }
+   else if (chart_type == 'bar') {
+    callbackbar()
+   }
+   else if (chart_type == 'pie') {
+    callbacpie()
+   }
    
-   // Execute callbackSecond() now as its
-   // the end of callbackFirst()
-   callbackline();
+   
 }
+
+
 var hidden = ''
 function callbackbar() {
    console.log("Second Function start");
@@ -134,4 +150,35 @@ function callbackline() {
   console.log("Second Function end");
 }
 
- 
+function callbackpie() {
+  console.log("Second Function start");
+  Highcharts.chart('chartcontainer', {
+     data: {
+       table: 'datatable',
+       switchRowsAndColumns: true
+
+     },
+     chart: {
+       type: 'pie'
+     },
+     title: {
+       text: hidden
+     },
+     credits: {
+       enabled: false
+     },
+     yAxis: {
+      allowDecimals: true,
+      title: {
+        text: 'habitants'
+      }
+    },
+    tooltip: {
+      formatter: function () {
+        return '<b>' + this.series.name + '</b><br/>' +
+          this.point.y + ' ' + this.point.name.toLowerCase();
+      }
+    }
+   });
+  console.log("Second Function end");
+}
