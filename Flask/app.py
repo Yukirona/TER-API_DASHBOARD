@@ -2,6 +2,9 @@ from mimetypes import init
 from flask import Flask, render_template
 from api import init_POPT1, init_FAMG1, init_FAMG5, init_LOGG2
 import random
+import urllib.request
+
+
 
 app = Flask(__name__)
 

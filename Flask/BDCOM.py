@@ -17,7 +17,8 @@ def INDICS_BDCOM():
         wanted_data_BDCOM = get_local_data(jeu_donnees ,croisement ,modalités ,nivgeo ,codgeo)
 
         base = Path('data_json')
-        jsonpath = base /  "wanted_data_BDCOM.json"
+        name_of_file = "wanted_data_"+jeu_donnees+"_"+croisement+"_"+codgeo+".json"
+        jsonpath = base /  name_of_file
         base.mkdir(exist_ok=True)
         jsonpath.write_text(json.dumps(wanted_data_BDCOM))
         print(type(wanted_data_BDCOM))

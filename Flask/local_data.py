@@ -3,7 +3,8 @@ from requests.structures import CaseInsensitiveDict
 import json
 from get_api_token import get_api_token
 from ratelimit import limits, sleep_and_retry
-
+from pathlib import Path
+from encodings import utf_8
 # 30 calls per minute
 CALLS = 30
 RATE_LIMIT = 60
@@ -33,8 +34,15 @@ def get_local_data(jeu_donnees ,croisement ,modalités ,nivgeo ,codgeo):
     response = requests.get(url, headers=headers)
     dcontent = response.content.decode("utf-8")
     jcontent = json.loads(dcontent)
+    response.status_code = 404
     print(response.status_code)
     if response.status_code != 200:
-        raise Exception('API response: {}'.format(response.status_code))
+        base = Path('data_json')
+        name_of_file = "wanted_data_"+jeu_donnees+"_"+croisement+"_"+codgeo+".json"
+        jsonpath = base /  name_of_file
+        with Path(jsonpath).open(encoding="UTF-8") as source:
+            jcontent = json.load(source)
+       
+        print(jcontent)
     return (jcontent)
  #/////////////////////////////////////////////////////////////////////////////#
